@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <article class="media content-section">
+    <div class="container">
+    <div class="row">
+    <div class="media-body">
+        <div class="article-metadata">
+            <small class="text-muted">{{ object.date_posted|date:"j F Y" }}</small>
+        </div>
+        <h2 class = "article-title">{{ object.title }}</h2>
+        <div class="by-line">
+        <p>{{ object.byline }}</p>
+        </div>
+        <p class="article-content">{{ object.content|safe }}</p>
+        <img src="{{object.image.url}}" alt="SnackBar Post Image" class="img-fluid">
+    </div>
+    </div>
+    </div>
+    </article>
+    {% include 'blog/comments.html' with url=object.pk %}
+
+{% endblock content %}
+
