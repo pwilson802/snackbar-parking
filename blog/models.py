@@ -6,6 +6,7 @@ from tinymce.models import HTMLField
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
+    category = models.CharField(max_length=30)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='parking_pics')
