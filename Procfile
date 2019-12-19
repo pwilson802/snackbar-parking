@@ -1,1 +1,1 @@
-web: gunicorn django_project.wsgi
+web: gunicorn snackbar-parking.wsgi
