@@ -1,1 +1,1 @@
-web: gunicorn snackbar-parking.wsgi
+web: gunicorn snacksite.wsgi
