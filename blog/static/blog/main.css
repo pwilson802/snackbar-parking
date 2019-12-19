@@ -50,11 +50,11 @@ body {
     white-space: pre-line;
   }
   
-  .article-img {
+  /* .article-img {
     height: 65px;
     width: 65px;
     margin-right: 16px;
-  }
+  } */
   
   .article-metadata {
     padding-bottom: 1px;
@@ -164,6 +164,10 @@ body {
   font-family: 'ABeeZee', sans-serif;
 }
 
+.newest-post img{
+  width: 100%;
+  height: auto
+}
 
 
 /* ***************
