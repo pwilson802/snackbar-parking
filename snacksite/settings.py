@@ -149,4 +149,9 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+
+CLOUDFRONT_DOMAIN = "d2bnnzhahqcei5.cloudfront.net"
+CLOUDFRONT_ID = "EAYQ42J86O3VV"
+AWS_S3_CUSTOM_DOMAIN = "d2bnnzhahqcei5.cloudfront.net"
+
 django_heroku.settings(locals())
