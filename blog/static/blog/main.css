@@ -39,6 +39,7 @@ body {
   
   .article-title {
     color: #444444;
+    font-family: 'ABeeZee', sans-serif;
   }
   
   a.article-title:hover {
@@ -65,19 +66,6 @@ body {
   .article-metadata a:hover {
     color: #333;
     text-decoration: none;
-  }
-  
-  .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
   }
   
   .account-heading {
@@ -160,12 +148,8 @@ body {
   Home Page
 *************** */
 
-.media-body h2{
-  font-family: 'ABeeZee', sans-serif;
-}
-
 .newest-post img{
-  /* width: 100%; */
+  width: auto;
   height: auto;
   max-width: 100%;
 }
