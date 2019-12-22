@@ -49,6 +49,7 @@ body {
   
   .article-content {
     white-space: pre-line;
+    color: #333;
   }
   
   
@@ -165,3 +166,12 @@ body {
   box-sizing: border-box;	
   width: 100%;
   }
+
+  /* .article-content p{
+    color: #333333;
+    text-decoration: none;
+  } */
+
+  .media-body a, a:hover, a:focus {
+    text-decoration: none;
+}

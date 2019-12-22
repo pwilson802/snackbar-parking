@@ -5,10 +5,11 @@
         <div class="media-body">
             <div class="newest-post">
                 <a href="{%url 'post-detail' post.id%}">
-                <div class="article-metadata">
-                        <h2 class="article-title">{{ post.title }}</h2>
-                    <small class="text-muted">{{ post.date_posted|date:"j F Y" }}</small>
-                </div>
+                <div class="post-entry">
+                    <div class="article-metadata">
+                            <h2 class="article-title">{{ post.title }}</h2>
+                        <small class="text-muted">{{ post.date_posted|date:"j F Y" }}</small>
+                    </div>
                     <div class="container mt-3">
                         <div class="row">
                             <div class="col-md-4">
@@ -19,7 +20,8 @@
                             </div>
                         </div>
                     </div>
-                    </a>
+                </div>
+                </a>
             </div>
         </div>
     </article>
