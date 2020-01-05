@@ -3,25 +3,31 @@
     {% for post in posts %}
     {% if forloop.first %}
     <div class="col-md-12">
-    <article class="media content-section newest-post">
-                    <div class="media-body">
+    <article class="newest-post">
+                <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
-                <div class="post-entry">
-                    <img class="rounded container" src="{{ post.image.url }}" alt="post image">
-                    <div class="row">
-                        <div class="post-left col-7 container">
-                            <div class="row justify-content-center align-items-center title-text ">
-                            <h2 class="article-title mt-3">{{ post.title }}</h1>
+                <div class="newest-post-entry" 
+                style="background: url({{ post.image.url }}) no-repeat center center fixed; 
+                       background-size: 100% 100%;
+                       -webkit-background-size: cover;
+                       -moz-background-size: cover;
+                       -o-background-size: cover;
+                       background-size: cover;
+                       min-height: 100%;
+                       width: 100%;
+                       background-position: center center;
+                       height: 380px;
+                       ">
+                    <div class="row head-article-content">
+                        <div class="post-left col-md-7 container">
+                            <div class="row justify-content-center align-items-center title-text h-75">
+                            <h1 class="head-article-title mt-3">{{ post.title }}</h1>
                             </div>
                         </div>
-                        <div class="post-right col-5 ">
-                            <small class="text-muted">{{ post.date_posted|date:"j F Y" }}</small>
-                                <div class="align-items-center d-flex article-content">
-                                    {% if forloop.first %}
-                                    <h4 class="row">{{ post.byline }}</h4>
-                                    {% else %}
-                                    <p class="row">{{ post.byline }}<p>
-                                    {% endif %}
+                        <div class="post-right col-md-5 ">
+                                <div class="align-items-center article-content h-100">
+                                    <h5 class="head-article-category mt-3">{{post.category}}</h5>
+                                    <h4 class="head-article-byline">{{ post.byline }}</h4>
                                 </div>
                         </div>
                     </div>
@@ -36,30 +42,17 @@
             <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
                 <div class="post-entry">
-                    <img class="rounded container" src="{{ post.image.url }}" alt="post image">
-                    <div class="row">
-                        <div class="post-left col-7 container">
-                            <div class="row justify-content-center align-items-center title-text ">
-                            <h2 class="article-title mt-3">{{ post.title }}</h1>
-                            </div>
-                        </div>
-                        <div class="post-right col-5 ">
-                            <small class="text-muted">{{ post.date_posted|date:"j F Y" }}</small>
-                                <div class="align-items-center d-flex article-content">
-                                    {% if forloop.first %}
-                                    <h4 class="row">{{ post.byline }}</h4>
-                                    {% else %}
-                                    <p class="row">{{ post.byline }}<p>
-                                    {% endif %}
-                                </div>
-                        </div>
-                    </div>
+                    <img class="rounded" src="{{ post.image.url }}" alt="post image">
+                    <h2 class="article-title">{{ post.title }}</h1>
+                    <h5 class="article-category mt-3">{{post.category}}</h5>
+                    <p class="article-byline">{{ post.byline | slice:":80" }}...<p>
                 </div>
                 </a>
             </div>
         </article>
-    {% endif %}
     </div>
+    {% endif %}
+    
     {% endfor %}
 
 
