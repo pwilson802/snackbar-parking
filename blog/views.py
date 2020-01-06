@@ -25,6 +25,14 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
 
+class PostListViewCategory(ListView):
+    model = Post
+    template_name = 'blog/categories.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = 5
+
+
 def about(request):
     return render(request, 'blog/about.html')
 

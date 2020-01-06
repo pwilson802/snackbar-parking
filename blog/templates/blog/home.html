@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+    <div class="row">
     {% for post in posts %}
     {% if forloop.first %}
     <div class="col-md-12">
@@ -7,7 +8,7 @@
                 <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
                 <div class="newest-post-entry" 
-                style="background: url({{ post.image.url }}) no-repeat center center fixed; 
+                style="background: url({{ post.imagewide.url }}) no-repeat center center fixed; 
                        background-size: 100% 100%;
                        -webkit-background-size: cover;
                        -moz-background-size: cover;
@@ -42,7 +43,7 @@
             <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
                 <div class="post-entry">
-                    <img class="rounded" src="{{ post.image.url }}" alt="post image">
+                    <img class="rounded" src="{{ post.imagesmall.url }}" alt="post image">
                     <h2 class="article-title">{{ post.title }}</h1>
                     <h5 class="article-category mt-3">{{post.category}}</h5>
                     <p class="article-byline">{{ post.byline | slice:":80" }}...<p>
@@ -55,5 +56,5 @@
     
     {% endfor %}
 
-
+    </div>
 {% endblock content %}

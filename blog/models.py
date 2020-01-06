@@ -9,7 +9,8 @@ class Post(models.Model):
     category = models.CharField(max_length=30)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='parking_pics')
+    imagewide = models.ImageField(upload_to='parking_pics')
+    imagesmall = models.ImageField(upload_to='parking_pics')
     byline = models.TextField()
     content = models.TextField()
 

@@ -12,12 +12,14 @@
         <p>{{ object.byline }}</p>
         </div>
         <p class="article-content">{{ object.content|safe }}</p>
-        <img src="{{object.image.url}}" alt="SnackBar Post Image" class="img-fluid">
+        <img src="{{object.imagewide.url}}" alt="SnackBar Post Image" class="img-fluid">
     </div>
     </div>
     </div>
     </article>
+    <div class="col-md-12">
     {% include 'blog/comments.html' with url=object.pk %}
+    </div>
 
 {% endblock content %}
 
