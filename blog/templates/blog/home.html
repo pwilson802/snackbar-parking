@@ -3,9 +3,13 @@
     {% for post in posts %}
     {% if forloop.first %}
     .newest-post-entry {
-    background: url({{ post.imagesmall.url }}) no-repeat center center fixed; 
-    background-size: 100% 100%;
-    height: 380px;
+    background: url({{ post.imagesmall.url }}) no-repeat center top fixed; 
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    overflow: hidden;
     }
 
 
