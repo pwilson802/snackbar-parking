@@ -1,4 +1,39 @@
 {% extends 'blog/base.html' %}
+{% block style_block %}
+    {% for post in posts %}
+    {% if forloop.first %}
+    .newest-post-entry {
+    background: url({{ post.imagesmall.url }}) no-repeat center center fixed; 
+    background-size: 100% 100%; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    background-position: center center;
+    height: 380px;
+    }
+
+
+    @media (min-width: 600px) {
+    .newest-post-entry {
+    background: url({{ post.imagewide.url }}) no-repeat center center fixed; 
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    background-position: center center;
+    height: 380px;
+    }
+    }
+
+    {% endif %}
+    {% endfor %}
+{% endblock style_block %}
 {% block content %}
     <div class="row">
     {% for post in posts %}
@@ -7,18 +42,7 @@
     <article class="newest-post">
                 <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
-                <div class="newest-post-entry" 
-                style="background: url({{ post.imagewide.url }}) no-repeat center center fixed; 
-                       background-size: 100% 100%;
-                       -webkit-background-size: cover;
-                       -moz-background-size: cover;
-                       -o-background-size: cover;
-                       background-size: cover;
-                       min-height: 100%;
-                       width: 100%;
-                       background-position: center center;
-                       height: 380px;
-                       ">
+                <div class="newest-post-entry">
                     <div class="row head-article-content">
                         <div class="post-left col-md-7 container">
                             <div class="row justify-content-center align-items-center title-text h-75">
