@@ -12,7 +12,13 @@
         <p>{{ object.byline }}</p>
         </div>
         <p class="article-content">{{ object.content|safe }}</p>
-        <img src="{{object.imagewide.url}}" alt="SnackBar Post Image" class="img-fluid">
+        <picture>
+            <source 
+                media="(max-width: 400px)"
+                srcset="{{object.imagesmall.url}}">
+            <img class="img-fluid" src="{{object.imagewide.url}}" 
+            alt="Article Image">
+        </picture>
     </div>
     </div>
     </div>
