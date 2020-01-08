@@ -3,28 +3,29 @@
     {% for post in posts %}
     {% if forloop.first %}
     .newest-post-entry {
-    background: url({{ post.imagesmall.url }}) no-repeat center top fixed; 
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
+    background: url({{ post.imagesmall.url }}) no-repeat center center; 
+    background-repeat: no-repeat;
     width: 100%;
-    overflow: hidden;
+    background-size: cover;
+    height:380px;
+    background-position: center center;
+    text-align:center;
+    margin:auto;
+    padding:0;
     }
 
 
-    @media (min-width: 600px) {
+    @media (min-width: 400px) {
     .newest-post-entry {
-    background: url({{ post.imagewide.url }}) no-repeat center center fixed; 
-    background-size: 100% 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 100%;
+    background: url({{ post.imagewide.url }}) no-repeat center center;
+    background-repeat: no-repeat;
     width: 100%;
+    background-size: cover;
+    height:380px;
     background-position: center center;
-    height: 380px;
+    text-align:center;
+    margin:auto;
+    padding:0;
     }
     }
 
