@@ -36,8 +36,8 @@
     <div class="row">
     {% for post in posts %}
     {% if forloop.first %}
-    <div class="col-md-12">
-    <article class="newest-post">
+    <div class="col-md-12 p-0">
+    <article class="newest-post p-0">
                 <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
                 <div class="newest-post-entry">
