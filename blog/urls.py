@@ -11,4 +11,6 @@ urlpatterns = [
     path('story/', PostListViewCategory.as_view(), name='story'),
     path('review/', PostListViewCategory.as_view(), name='review'),
     path('category/', PostListViewCategory.as_view(), name='categories'),
+    path('news/', PostListViewCategory.as_view(), name='news'),
+    path('snack-bar/', PostListViewCategory.as_view(), name='snack-bar'),
 ]
