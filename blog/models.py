@@ -5,8 +5,14 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 
 class Post(models.Model):
+    category_choices = (
+        ('story', 'story'),
+        ('review', 'review'),
+        ('news', 'news'),
+        ('snack-bar', 'snack-bar')
+    )
     title = models.CharField(max_length=100)
-    category = models.CharField(max_length=30)
+    category = models.CharField(max_length=30, choices=category_choices)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     imagewide = models.ImageField(upload_to='parking_pics')
