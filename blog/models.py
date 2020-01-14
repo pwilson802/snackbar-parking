@@ -13,6 +13,10 @@ class Post(models.Model):
     imagesmall = models.ImageField(upload_to='parking_pics')
     byline = models.TextField()
     content = models.TextField()
+    park_type = models.CharField(max_length=100, blank=True, default='')
+    park_destination = models.CharField(max_length=100, blank=True, default='')
+    park_difficulty = models.CharField(max_length=100, blank=True, default='')
+    park_restrictions = models.CharField(max_length=100, blank=True, default='')
 
     def __str__(self):
         return self.title
