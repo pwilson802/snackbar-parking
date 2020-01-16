@@ -62,14 +62,14 @@
     </div>
     {% else %}
     <div class="col-md-6">
-        <article class="media content-section other-posts row">
+        <article class="media content-section other-posts row row-eq-height">
             <div class="media-body">
                 <a href="{%url 'post-detail' post.id%}">
                 <div class="post-entry">
                     <img class="rounded" src="{{ post.imagesmall.url }}" alt="post image">
                     <h2 class="article-title">{{ post.title }}</h1>
                     <h5 class="article-category mt-3">{{post.category}}</h5>
-                    <p class="article-byline">{{ post.byline | slice:":80" }}...<p>
+                    <p class="article-byline">{{ post.byline }}<p>
                 </div>
                 </a>
             </div>

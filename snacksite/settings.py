@@ -25,8 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG_VALUE')
-# DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['snackbarparking-prd.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -155,7 +154,6 @@ CLOUDFRONT_ID = "EAYQ42J86O3VV"
 AWS_S3_CUSTOM_DOMAIN = "d2bnnzhahqcei5.cloudfront.net"
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT')
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = (os.environ.get('SECURE_SSL_REDIRECT') == 'True')
 
 django_heroku.settings(locals())
