@@ -155,6 +155,7 @@ CLOUDFRONT_ID = "EAYQ42J86O3VV"
 AWS_S3_CUSTOM_DOMAIN = "d2bnnzhahqcei5.cloudfront.net"
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT')
+# SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT')
+SECURE_SSL_REDIRECT = False
 
 django_heroku.settings(locals())
