@@ -23,6 +23,10 @@ class Post(models.Model):
     park_destination = models.CharField(max_length=100, blank=True, default='')
     park_difficulty = models.CharField(max_length=100, blank=True, default='')
     park_restrictions = models.CharField(max_length=100, blank=True, default='')
+    review_location = models.CharField(max_length=100, blank=True, default='')
+    review_type = models.CharField(max_length=100, blank=True, default='')
+    review_restrictions = models.CharField(max_length=100, blank=True, default='')
+    review_snackbar_status = models.CharField(max_length=100, blank=True, default='')
     head_article_byline_widescreen_margin = models.CharField(max_length=4, default='0')
 
     def __str__(self):
