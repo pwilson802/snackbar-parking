@@ -28,6 +28,7 @@ class Post(models.Model):
     review_restrictions = models.CharField(max_length=100, blank=True, default='')
     review_snackbar_status = models.CharField(max_length=100, blank=True, default='')
     head_article_byline_widescreen_margin = models.CharField(max_length=4, default='0')
+    slug = models.SlugField()
 
     def __str__(self):
         return self.title

@@ -6,7 +6,7 @@
     <div class="col-md-4">
         <article class="media content-section other-posts row">
             <div class="media-body">
-                <a href="{%url 'post-detail' post.id%}">
+                <a href="{%url 'post-detail' post.slug%}">
                 <div class="post-entry">
                     <img class="rounded" src="{{ post.imagesmall.url }}" alt="post image">
                     <h2 class="article-title">{{ post.title }}</h1>

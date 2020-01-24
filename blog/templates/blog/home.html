@@ -40,7 +40,7 @@
     <div class="col-md-12 p-0">
     <article class="newest-post p-0">
                 <div class="media-body">
-                <a href="{%url 'post-detail' post.id%}">
+                <a href="{%url 'post-detail' post.slug%}">
                 <div class="newest-post-entry">
                     <div class="row head-article-content">
                         <div class="post-left col-md-7 container">
@@ -64,7 +64,7 @@
     <div class="col-md-6">
         <article class="media content-section other-posts row row-eq-height">
             <div class="media-body">
-                <a href="{%url 'post-detail' post.id%}">
+                <a href="{%url 'post-detail' post.slug%}">
                 <div class="post-entry">
                     <img class="rounded" src="{{ post.imagesmall.url }}" alt="post image">
                     <h2 class="article-title">{{ post.title }}</h1>
