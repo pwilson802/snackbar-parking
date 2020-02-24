@@ -8,9 +8,9 @@
             <small class="text-muted">{{ object.date_posted|date:"j F Y" }}</small>
         </div>
         <h2 class = "article-title">{{ object.title }}</h2>
-        <div class="by-line">
+        {% comment %} <div class="by-line">
         <p>{{ object.byline }}</p>
-        </div>
+        </div> {% endcomment %}
         {% if object.category == 'story'  %}
             <div class="story-table p-3" style="display:inline-block">
                 <span class="span font-weight-bold">Type: </span>{{ object.park_type }}<br>
