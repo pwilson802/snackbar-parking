@@ -7,7 +7,7 @@ django-crispy-forms==1.8.1
 django-heroku==0.3.1
 django-static-fontawesome==5.10.2
 django-storages==1.8
-django-tinymce==2.8.0
+django-tinymce==3.4.0
 docutils==0.15.2
 gunicorn==20.0.4
 jmespath==0.9.4
